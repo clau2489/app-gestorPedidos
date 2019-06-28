@@ -12,3 +12,9 @@ body{
 .fa {
     font-size: 12px;
 }
+.botn {
+    padding-left: 8px;
+    padding-top: 2px;
+    padding-right: 8px;
+    padding-bottom: 2px;
+}

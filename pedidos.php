@@ -10,18 +10,18 @@
   <title></title>
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="vendor/bootstrap/css/style.css" rel="stylesheet">
-  <link href="fontawesome/css/all.css" rel="stylesheet">
+  <link href="vendor/fontawesome/css/all.css" rel="stylesheet">
 </head>
 
 <body>  
   <div class="container mt-5">
     <div class="row">
-      <div class="col-md-6 offset-md-3">
+      <div class="col-md-8 offset-md-2">
         <div class="jumbotron">
           <h1 class="display-6">Genera un Nuevo Pedido!</h1>
           <p class="lead">Seleccioná el Cliente y carga el pedido que te hace</p>
           <hr class="my-4">
-          <form action="agregarPedido.php" method="post" >
+          <form action="procesos/agregarPedido.php" method="post" >
             <label>Cliente: </label>
             <select class="form-control" name="cliente">
               <?php

@@ -13,7 +13,7 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="vendor/bootstrap/css/style.css" rel="stylesheet">
-  <link href="fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+  <link href="vendor/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
 
 </head>
 
@@ -25,7 +25,7 @@
         <div class="jumbotron">
           <h6 class="display-6">Agregá un nuevo cliente con un solo Click!</h6>
           <hr class="my-4">
-          <form method="post" action="agregarCliente.php">
+          <form method="post" action="procesos/agregarCliente.php">
             <div class="row">
               <div class="col-md-3">
                 <input type="text" class="form-control m-1" placeholder="Codigo Cliente" name="codigocliente" id="codigocliente" required>
@@ -53,7 +53,6 @@
             <table class="table table-bordered bg-white">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
                   <th scope="col">Cliente</th>
                   <th scope="col"></th>
                 </tr>
@@ -65,9 +64,9 @@
               while($rw=mysqli_fetch_array($query_clientes)) {  
               ?>
               <tbody>
-                  <td><?php echo $rw['codigo_cliente']; ?></td>
                   <td><?php echo $rw['nombre']; ?></td>
-                  <td><a class="btn btn-warning m-1"><i class="fa fas fa-search"></i></a><a class="btn btn-danger m-1" href="borrarCliente.php" onclick="confirmar()" id="<?php echo $rw['id_cliente']; ?>"><i class="fa fas fa-trash-alt"></i></a>
+                  <td style="width: 50px; padding: 5px;"><a href="index.php" class="botn btn btn-secondary m-1"><i class="fa fas fa-search"></i></a>
+                    <!--<a class="btn btn-danger m-1" href="borrarCliente.php" onclick="confirmar()" id="<?php echo $rw['id_cliente']; ?>"><i class="fa fas fa-trash-alt"></i></a> -->
                 </td>
               </tbody>
               <?php
@@ -85,7 +84,7 @@
     {
       if (confirm("¿Desea Eliminar el registro?")) 
       {
-        window.location.href = "borrarCliente.php?="+ id_cliente;
+        window.location.href = "procesos/borrarCliente.php?="+ id_cliente;
       }
     }
   </script>
