@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title></title>
+  <meta name="description" content="API pedidos">
+  <meta name="author" content="Oeste-DEV">
+  <title>Mis Pedidos</title>
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="vendor/bootstrap/css/style.css" rel="stylesheet">
   <link href="vendor/fontawesome/css/all.css" rel="stylesheet">
@@ -18,13 +18,14 @@
     <div class="row">
       <div class="col-md-8 offset-md-2">
         <div class="jumbotron">
+          <img src="img/logo.png" style="width: 50% ">
           <h1 class="display-6">Bienvenido!</h1>
           <p class="lead">Administrá tus pedidos de la forma más facil</p>
           <hr class="my-4">
           <p>Selecciona una acción.</p>
-          <a class="btn btn-primary btn-block" href="pedidos.php" role="button">Generar un Nuevo Pedido</a>
-          <a class="btn btn-warning btn-block" href="clientes.php" role="button">Agenda de Pedidos</a>
-          <a class="btn btn-success btn-block" href="clientes.php" role="button">Ver Listado de Clientes</a>
+          <a class="btn btn-primary btn-block" href="crearNuevoPedido.php" role="button">Generar un Nuevo Pedido</a>
+          <a class="btn btn-warning btn-block" href="verListaPedidos.php" role="button">Agenda de Pedidos</a>
+          <a class="btn btn-success btn-block" href="gestionClientes.php" role="button">Ver cartera de Clientes</a>
           <a class="btn btn-danger btn-block" href="clientes.php" role="button">Revisar Mis Cuentas</a>
         </div>
       </div>

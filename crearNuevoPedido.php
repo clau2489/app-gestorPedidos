@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -18,10 +18,12 @@
     <div class="row">
       <div class="col-md-8 offset-md-2">
         <div class="jumbotron">
-          <h1 class="display-6">Genera un Nuevo Pedido!</h1>
+          <h4 class="display-6">Genera un Nuevo Pedido!</h4>
           <p class="lead">Seleccioná el Cliente y carga el pedido que te hace</p>
           <hr class="my-4">
           <form action="procesos/agregarPedido.php" method="post" >
+            <label>Fecha de Entrega: </label>
+            <input class="form-control" type="date" name="fecha">
             <label>Cliente: </label>
             <select class="form-control" name="cliente">
               <?php

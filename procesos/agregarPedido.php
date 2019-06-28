@@ -5,12 +5,13 @@
 	$cliente = $_POST["cliente"];
 	$producto = $_POST["producto"];
 	$precio = $_POST["precio"];
-	$kilos = $_POST["kilos"]; 
+	$kilos = $_POST["kilos"];
+	$fecha = $_POST["fecha"]; 
 
-	$sql = "INSERT INTO pedidos (id_cliente, producto, precio, cant_kilos) VALUES ('$cliente', '$producto', '$precio', '$kilos')";
+	$sql = "INSERT INTO pedidos (cliente, producto, precio, cant_kilos, fecha) VALUES ('$cliente', '$producto', '$precio', '$kilos', '$fecha')";
 
 	if ($conn->query($sql) === TRUE) {
-	  header("Location: ../pedidos.php");
+	  header("Location: ../verListaPedidos.php");
 	} else {
 	  echo "Error: " . $sql . "<br>" . $conn->error; //Redireccion de la página
 	}

@@ -23,7 +23,7 @@
     <div class="row">
       <div class="col-md-8 offset-md-2">
         <div class="jumbotron">
-          <h6 class="display-6">Agregá un nuevo cliente con un solo Click!</h6>
+          <h4 class="display-6">Agregá un nuevo cliente con un solo Click!</h4>
           <hr class="my-4">
           <form method="post" action="procesos/agregarCliente.php">
             <div class="row">

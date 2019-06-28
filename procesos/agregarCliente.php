@@ -8,7 +8,7 @@
 	$sql = "INSERT INTO cliente (codigo_cliente, nombre) VALUES ('$cod', '$nom')";
 
 	if ($conn->query($sql) === TRUE) {
-	  header("Location: ../clientes.php");
+	  header("Location: ../gestionClientes.php");
 	} else {
 	  echo "Error: " . $sql . "<br>" . $conn->error; //Redireccion de la página
 	}
