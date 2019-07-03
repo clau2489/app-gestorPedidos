@@ -21,11 +21,11 @@
           <h4 class="display-6">Genera un Nuevo Pedido!</h4>
           <p class="lead">Seleccioná el Cliente y carga el pedido que te hace</p>
           <hr class="my-4">
-          <form action="procesos/agregarPedido.php" method="post" >
-            <label>Fecha de Entrega: </label>
-            <input class="form-control" type="date" name="fecha">
-            <label>Cliente: </label>
-            <select class="form-control" name="cliente">
+          <form action="procesos/agregarPedido.php" method="post">
+            <label>¿En qué fecha vas a entregar el pedido? </label>
+            <input class="form-control" type="date" name="fecha" required>
+            <label>Selecciona el Cliente: </label>
+            <select class="form-control" name="cliente" required>
               <?php
               require_once ("conexion/db.php");
               require_once ("conexion/conexion.php");
@@ -37,26 +37,34 @@
               }
               ?> 
             </select>
-            <label>Producto: </label>
-            <select class="form-control" name="producto">
+            <label>Producto a despachar: </label>
+            <select class="form-control" name="producto" required>
               <option selected>Seleccionar..</option>
-              <option value="1">Ricota -- Chica</option>
-              <option value="2">Ricota -- Grande</option>
-              <option value="3">Ricota -- x Bolsa</option>
-              <option value="4">Muzzarella -- Barra</option>
-              <option value="5">Muzzarella -- Cilindro</option>
-              <option value="6">Muzzarella -- Plancha</option>
-              <option value="7">Tybos -- Barra</option>
-              <option value="8">Cremoso</option>
-              <option value="9">Port Salut</option>
+              <option value="Ricota - Chica">Ricota -- Chica</option>
+              <option value="Ricota - Grande">Ricota -- Grande</option>
+              <option value="Ricota - Bolsa">Ricota -- x Bolsa</option>
+              <option value="Muzzarella - Barra">Muzzarella -- Barra</option>
+              <option value="Muzzarella - Cilindro">Muzzarella -- Cilindro</option>
+              <option value="Muzzarella - Plancha">Muzzarella -- Plancha</option>
+              <option value="Tybos - Barra">Tybos -- Barra</option>
+              <option value="Cremoso">Cremoso</option>
+              <option value="Por Salut">Port Salut</option>
             </select>           
             <label>Precio x Kg: </label>
-            <input class="form-control" type="number" name="precio" step="0.01">
+            <input class="form-control" type="number" name="precio" step="0.01" required>
             <label>Cantidad de Kg pedidos: </label>
-            <input class="form-control" type="number" name="kilos" step="0.01">
+            <input class="form-control" type="number" name="kilos" step="0.01" required>
             <button type="submit" class="btn btn-success btn-block mt-4" href="">Guardar pedido</button>        
           </form>           
         </div>        
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <a href="index.php" class="btn btn-primary btn-lg">Volver al Inicio</a>
       </div>
     </div>
   </div>
