@@ -51,15 +51,14 @@
                   </tr>
                 </tbody>
             </table>
-          </div>         
+          </div>
+          <hr class="my-4">
+          <div class="row">
+            <div class="col-md-12">
+              <a href="index.php" class="btn btn-secondary btn-block">Volver al Inicio</a>
+            </div>
+          </div>                   
         </div>        
-      </div>
-    </div>
-  </div>
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
-        <a href="index.php" class="btn btn-primary btn-lg">Volver al Inicio</a>
       </div>
     </div>
   </div>

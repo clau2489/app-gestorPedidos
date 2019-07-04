@@ -55,16 +55,14 @@
             <label>Cantidad de Kg pedidos: </label>
             <input class="form-control" type="number" name="kilos" step="0.01" required>
             <button type="submit" class="btn btn-success btn-block mt-4" href="">Guardar pedido</button>        
-          </form>           
+          </form>
+          <hr class="my-4">
+          <div class="row">
+            <div class="col-md-12">
+              <a href="index.php" class="btn btn-secondary btn-block">Volver al Inicio</a>
+            </div>
+          </div>                     
         </div>        
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
-        <a href="index.php" class="btn btn-primary btn-lg">Volver al Inicio</a>
       </div>
     </div>
   </div>

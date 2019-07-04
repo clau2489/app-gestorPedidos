@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="API pedidos">
@@ -19,7 +18,7 @@
       <div class="col-md-8 offset-md-2">
         <div class="jumbotron">
           <!--<img src="img/logo.png" style="width: 50% "> -->
-          <h1 class="display-6">Bienvenido!</h1>
+          <h1 class="display-5">Bienvenido!</h1>
           <p class="lead">Administrá tus pedidos de la forma más facil</p>
           <hr class="my-4">
           <p>Elegí una opción:</p>
