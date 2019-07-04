@@ -21,7 +21,7 @@
 
   <div class="container mt-5">
     <div class="row">
-      <div class="col-md-8 offset-md-2">
+      <div class="col-md-10 offset-md-1">
         <div class="jumbotron">
           <h4 class="display-6">Agregá un nuevo cliente con un solo Click!</h4>
           <hr class="my-4">
@@ -45,7 +45,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-8 offset-md-2">
+      <div class="col-md-10 offset-md-1">
         <div class="jumbotron">
           <h6 class="display-6">Tu Lista de Clientes!</h6>
           <hr class="my-4">
@@ -77,7 +77,7 @@
           <hr class="my-4">
           <div class="row">
             <div class="col-md-12">
-              <a href="index.php" class="btn btn-secondary btn-block">Volver al Inicio</a>
+              <a href="index.php" class="btn btn-secondary btn-sm">Volver al Inicio</a>
             </div>
           </div>           
         </div>

@@ -17,7 +17,7 @@
 
   <div class="container mt-5">
     <div class="row">
-      <div class="col-md-8 offset-md-2">
+      <div class="col-md-6 offset-md-3">
         <?php
         require_once ("conexion/db.php");
         require_once ("conexion/conexion.php");
@@ -26,47 +26,43 @@
         while($rw=mysqli_fetch_array($query_pedidos)) {  
         ?>        
         <div class="jumbotron">
-          <h4 class="display-6">Detalle del Pedido N° <?php echo $rw['id_pedido']; ?> </h4>
-          <hr class="my-4">
-          <div class="row">
-            <div class="col-md-12">
-              <h5>Cliente: <?php echo $rw['cliente']; ?></h5>
-            </div>
-          </div>
+          <h6 class="display-6">Pedido N° <?php echo $rw['id_pedido']; ?>  - Cliente: <span><?php echo $rw['cliente']; ?></h6>
           <hr class="my-4">
           <div class="row">
             <div class="col-md-8"> 
-              <h2><?php echo $rw['cant_kilos']; ?> <?php echo $rw['producto']; ?></h2>
+              <h6 class="h4 text-primary"><?php echo $rw['producto']; ?></h6>
             </div>
             <div class="col-md-4">
-              <h5>Precio x Kg: $<?php echo $rw['precio']; ?></h5>
+              <h5 class="lead"><?php echo $rw['cant_kilos']; ?> Unidades<br>Precio x Kg: $<?php echo $rw['precio']; ?></h5>
             </div>                             
           </div>
           <hr class="my-4">
           <div class="row">
             <div class="col-md-12">
-              <?php 
-              $p = $rw['precio'];
-              $k = $rw['cant_kilos'];
-              $total = $p * $k;
-              ?>
-              <h1 class="h3 text-success">Total a pagar: $<?php echo $total ?>.-</h1>               
-            </div>             
-          </div>
-          <hr class="my-4">
-          <div class="row">
-            <div class="col-md-6">
-              <h5>Pago a Cuenta:</h5>
-              <input type="number" name="">
+              <form action="procesos/actualizarPedido.php?id=<?php echo $rw['id_pedido']; ?>" method="post">
+                <div class="col-md-12">
+                  <h3 class="h2 text-success">Total: $<?php echo $rw['total'] ?>.-</h3>
+                  <hr class="my-4">           
+                </div>
+                <div class="col-md-12">
+                  <h5>Pago a Cuenta:</h5>
+                  <input type="number" name="cuenta" id="cuenta" class="form-control jp">
+                </div>
+                <div class="col-md-12">
+                  <h5>Saldo: </h5>
+                  <input type="number" name="saldo" id="saldo" value="$<?php echo $rw['saldo'] ?>.-" class="form-control jp">
+                </div>
+                <div class="col-md-12">
+                  <hr class="my-4">
+                  <input type="submit" name="" class="btn btn-primary btn-block" value="Actualizar">
+                </div>                
+              </form>              
             </div>
-            <div class="col-md-6">
-              <h5>Saldo: </h5>
-            </div>            
-          </div>
+          </div>                                     
           <hr class="my-4">
           <div class="row">
             <div class="col-md-12">
-              <a href="index.php" class="btn btn-secondary btn-block">Volver al Inicio</a>
+              <a href="index.php" class="btn btn-secondary btn-sm">Volver al Inicio</a>
             </div>
           </div>       
         </div>

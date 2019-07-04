@@ -16,7 +16,7 @@
 <body>  
   <div class="container mt-5">
     <div class="row">
-      <div class="col-md-8 offset-md-2">
+      <div class="col-md-10 offset-md-1">
         <div class="jumbotron">
           <h4 class="display-6">Controlá tus pedidos!</h4>
           <p class="lead">Obtené mas detalles haciendo click en la lupa</p>
@@ -28,7 +28,7 @@
                     <th scope="col">Fecha:</th>
                     <th scope="col">Cliente</th>
                     <th scope="col">Producto</th>
-                    <th scope="col">Kilos</th>
+                    <th scope="col">Cantidad</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
@@ -55,7 +55,7 @@
           <hr class="my-4">
           <div class="row">
             <div class="col-md-12">
-              <a href="index.php" class="btn btn-secondary btn-block">Volver al Inicio</a>
+              <a href="index.php" class="btn btn-secondary btn-sm">Volver al Inicio</a>
             </div>
           </div>                   
         </div>        

@@ -6,9 +6,12 @@
 	$producto = $_POST["producto"];
 	$precio = $_POST["precio"];
 	$kilos = $_POST["kilos"];
-	$fecha = $_POST["fecha"]; 
+	$fecha = $_POST["fecha"];
+    $total = $kilos * $precio;
+    $cuenta = 0;
+    $saldo = $total - $cuenta;	 
 
-	$sql = "INSERT INTO pedidos (cliente, producto, precio, cant_kilos, fecha) VALUES ('$cliente', '$producto', '$precio', '$kilos', '$fecha')";
+	$sql = "INSERT INTO pedidos (cliente, producto, precio, cant_kilos, fecha, total, cuenta, saldo) VALUES ('$cliente', '$producto', '$precio', '$kilos', '$fecha', $total, $cuenta, $saldo)";
 
 	if ($conn->query($sql) === TRUE) {
 	  header("Location: ../verListaPedidos.php");

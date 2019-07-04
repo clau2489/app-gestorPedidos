@@ -17,7 +17,7 @@
 
   <div class="container mt-5">
     <div class="row">
-      <div class="col-md-8 offset-md-2">
+      <div class="col-md-6 offset-md-3">
         <div class="jumbotron">
           <h4 class="display-6">Datos del Cliente</h4>
           <hr class="my-4">
@@ -83,7 +83,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
-        <a href="index.php" class="btn btn-secondary btn-block">Volver al Inicio</a>
+        <a href="index.php" class="btn btn-secondary btn-sm">Volver al Inicio</a>
       </div>
     </div>
   </div>
