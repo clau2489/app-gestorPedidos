@@ -3,11 +3,9 @@
 	require_once ("../conexion/conexion.php");
 
 	$id = $_GET['id'];
-	$total = $_POST["total"];
 	$cuenta = $_POST["cuenta"];
-	$saldo = $_POST["saldo"];
 
-	$sql = "UPDATE pedidos SET total='$total', cuenta='$cuenta', saldo='$saldo' WHERE id_pedido='$id'";
+	$sql = "UPDATE pedidos SET cuenta='$cuenta' WHERE id_pedido='$id'";
 
 	if ($conn->query($sql) === TRUE) {
 	  header("Location: ../detallePedidos.php");

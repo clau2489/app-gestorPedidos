@@ -39,24 +39,19 @@
           <hr class="my-4">
           <div class="row">
             <div class="col-md-12">
-              <form action="procesos/actualizarPedido.php?id=<?php echo $rw['id_pedido']; ?>" method="post">
-                <div class="col-md-12">
-                  <h3 class="h2 text-success">Total: $<?php echo $rw['total'] ?>.-</h3>
-                  <hr class="my-4">           
-                </div>
-                <div class="col-md-12">
-                  <h5>Pago a Cuenta:</h5>
-                  <input type="number" name="cuenta" id="cuenta" class="form-control jp">
-                </div>
-                <div class="col-md-12">
-                  <h5>Saldo: </h5>
-                  <input type="number" name="saldo" id="saldo" value="$<?php echo $rw['saldo'] ?>.-" class="form-control jp">
-                </div>
-                <div class="col-md-12">
-                  <hr class="my-4">
-                  <input type="submit" name="" class="btn btn-primary btn-block" value="Actualizar">
-                </div>                
-              </form>              
+              <div class="col-md-12">
+                <h5>Total a pagar: <?php echo $rw['total'] ?></h5>
+                <h5>Saldo: $ <?php echo $rw['saldo'] ?>.-</h5>
+                <hr class="my-4">           
+              </div>
+              <div class="col-md-12">
+                <h5>Pago a Cuenta:</h5>
+                <input type="number" name="cuenta" id="cuenta" class="form-control jp text-warning" step='0.01' value='0.00' placeholder='0.00'>
+              </div>
+              <div class="col-md-12">
+                <hr class="my-4">
+                <a href="procesos/actualizarPedido.php?id=<?php echo $rw['id_pedido']; ?>" class="btn btn-primary btn-block" >Actualizar<a>
+              </div>                              
             </div>
           </div>                                     
           <hr class="my-4">
