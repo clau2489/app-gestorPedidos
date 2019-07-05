@@ -8,13 +8,12 @@
 	$kilos = $_POST["kilos"];
 	$fecha = $_POST["fecha"];
     $total = $kilos * $precio;
-    $cuenta = 0;
-    $saldo = $total - $cuenta;	 
+    $estado = "Pendiente";
 
-	$sql = "INSERT INTO pedidos (cliente, producto, precio, cant_kilos, fecha, total, cuenta, saldo) VALUES ('$cliente', '$producto', '$precio', '$kilos', '$fecha', $total, $cuenta, $saldo)";
+	$sql = "INSERT INTO pedidos (cliente, producto, precio, cant_kilos, fecha, total, estado) VALUES ('$cliente', '$producto', '$precio', '$kilos', '$fecha', '$total', '$estado')";
 
 	if ($conn->query($sql) === TRUE) {
-	  header("Location: ../verListaPedidos.php");
+	  header("Location: ../pedidos-pendientes.php");
 	} else {
 	  echo "Error: " . $sql . "<br>" . $conn->error; //Redireccion de la página
 	}

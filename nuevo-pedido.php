@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title></title>
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="vendor/bootstrap/css/style.css" rel="stylesheet">
-  <link href="vendor/fontawesome/css/all.css" rel="stylesheet">
-</head>
+<?php include 'header.php';?>
 
 <body>  
   <div class="container mt-5">
@@ -72,31 +62,8 @@
       </div>
     </div>
   </div>
-
-  <script type="text/javascript">
-    function sumar (valor) {
-        var total = 0;  
-        valor = parseInt(valor); // Convertir el valor a un entero (número).
-      
-        total = document.getElementById('precio').innerHTML;
-      
-        // Aquí valido si hay un valor previo, si no hay datos, le pongo un cero "0".
-        total = (total == null || total == undefined || total == "") ? 0 : total;
-      
-        /* Esta es la suma. */
-        total = (parseInt(total) + parseInt(valor));
-      
-        // Colocar el resultado de la suma en el control "span".
-        document.getElementById('precio').innerHTML = total;
-    }    
-  </script>
-
-
-
   
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.slim.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <?php include 'footer.php';?>
 
 </body>
 

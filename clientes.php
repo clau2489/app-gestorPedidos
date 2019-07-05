@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title></title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="vendor/bootstrap/css/style.css" rel="stylesheet">
-  <link href="vendor/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
-
-</head>
+<?php include 'header.php';?>
 
 <body>
 
@@ -64,9 +50,9 @@
               while($rw=mysqli_fetch_array($query_clientes)) {  
               ?>
               <tbody>
-                  <td><?php echo $rw['nombre']; ?></td>
-                  <td style="width: 50px; padding: 5px;"><a href="detalleClientes.php?id=<?php echo $rw['id_cliente']; ?>" class="botn btn btn-secondary m-1"><i class="fa fas fa-search"></i></a>
-                    <a class="btn btn-danger m-1" href="procesos/borrarCliente.php?id=<?php echo $rw['id_cliente']; ?>" onclick="confirmar()" id="<?php echo $rw['id_cliente']; ?>"><i class="fa fas fa-trash-alt"></i></a>
+                <td><?php echo $rw['nombre']; ?></td>
+                <td style="width: 100px; padding: 5px;"><a href="historial-pedidos.php?id=<?php echo $rw['id_cliente']; ?>" class="botn btn btn-secondary m-1"><i class="fa fas fa-search"></i></a>
+                  <a class="botn btn btn-danger m-1" href="procesos/borrarCliente.php?id=<?php echo $rw['id_cliente']; ?>" onclick="confirmar()" id="<?php echo $rw['id_cliente']; ?>"><i class="fa fas fa-trash-alt"></i></a>
                 </td>
               </tbody>
               <?php
@@ -85,21 +71,7 @@
     </div>
   </div>
 
-  
-
-  <script type="text/javascript">  
-    function confirmar(id_cliente)
-    {
-      if (confirm("¿Desea Eliminar el registro?")) 
-      {
-        window.location.href = "procesos/borrarCliente.php?="+ id_cliente;
-      }
-    }
-  </script>
-  
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.slim.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <?php include 'footer.php';?>
 
 </body>
 

@@ -3,12 +3,12 @@
 	require_once ("../conexion/conexion.php");
 
 	$id = $_GET['id'];
-	$cuenta = $_POST["cuenta"];
+	$estado = "Entregado";
 
-	$sql = "UPDATE pedidos SET cuenta='$cuenta' WHERE id_pedido='$id'";
+	$sql = "UPDATE pedidos SET estado='$estado' WHERE id_pedido='$id'";
 
 	if ($conn->query($sql) === TRUE) {
-	  header("Location: ../detallePedidos.php");
+	  header("Location: ../pedidos-pendientes.php");
 	} else {
 	  echo "Error: " . $sql . "<br>" . $conn->error; //Redireccion de la página
 	}
