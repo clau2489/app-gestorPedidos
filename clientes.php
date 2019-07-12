@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <?php include 'header.php';?>
-
 <body>
-
   <div class="container mt-5">
     <div class="row">
-      <div class="col-md-10 offset-md-1">
+      <div class="col-md-12">
         <div class="jumbotron">
           <h4 class="display-6">Agregá un nuevo cliente con un solo Click!</h4>
           <hr class="my-4">
@@ -31,16 +28,16 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-10 offset-md-1">
+      <div class="col-md-12">
         <div class="jumbotron">
           <h6 class="display-6">Tu Lista de Clientes!</h6>
           <hr class="my-4">
           <div class="table-responsive">
             <table class="table table-bordered bg-white">
-              <thead>
+              <thead class="bg-secondary">
                 <tr>
-                  <th scope="col">Cliente</th>
-                  <th scope="col"></th>
+                  <th scope="col" class="text-white">Cliente</th>
+                  <th scope="col" class="text-white">Ver</th>
                 </tr>
               </thead>
               <?php
@@ -51,8 +48,8 @@
               ?>
               <tbody>
                 <td><?php echo $rw['nombre']; ?></td>
-                <td style="width: 100px; padding: 5px;"><a href="historial-pedidos.php?id=<?php echo $rw['id_cliente']; ?>" class="botn btn btn-secondary m-1"><i class="fa fas fa-search"></i></a>
-                  <a class="botn btn btn-danger m-1" href="procesos/borrarCliente.php?id=<?php echo $rw['id_cliente']; ?>" onclick="confirmar()" id="<?php echo $rw['id_cliente']; ?>"><i class="fa fas fa-trash-alt"></i></a>
+                <td style="width: 50px; padding: 5px;"><a href="historial-pedidos.php?id=<?php echo $rw['id_cliente']; ?>" class="botn btn btn-success m-1"><i class="fa fas fa-search"></i></a>
+                <!--<a class="botn btn btn-danger m-1" href="procesos/borrarCliente.php?id=<?php echo $rw['id_cliente']; ?>" onclick="confirmar()" id="<?php echo $rw['id_cliente']; ?>"><i class="fa fas fa-trash-alt"></i></a> -->
                 </td>
               </tbody>
               <?php
@@ -63,13 +60,25 @@
           <hr class="my-4">
           <div class="row">
             <div class="col-md-12">
-              <a href="index.php" class="btn btn-secondary btn-sm">Volver al Inicio</a>
+              <a href="home.php" class="btn btn-secondary btn-sm">Volver al Inicio</a>
             </div>
           </div>           
         </div>
       </div>      
     </div>
   </div>
+  
+  <script type="text/javascript">  
+    function confirmar(id_cliente)
+    {
+      if (confirm("¿Esta Seguro de eliminar el Cliente? Una vez eliminado no se podrá acceder al historial de dicho cliente. Por su seguridad, asegurese de resguardar la información")) 
+      {
+        window.location.href = "procesos/borrarCliente.php?="+ id_cliente;
+      }
+      
+    }
+  </script>
+
 
   <?php include 'footer.php';?>
 
